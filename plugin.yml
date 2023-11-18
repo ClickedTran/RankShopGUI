@@ -1,0 +1,23 @@
+name: RankShopGUI
+main: ClickedTran\rankshop\RankShopGUI
+api: 5.0.0
+version: 1.0.0
+author: ClickedTran
+depend: [PurePerms]
+virions: ["InvMenu", "FormAPI", "libPiggyEconomy"]
+
+permissions:
+ rankshop.command:
+  default: true
+  description: Permission for player use RankShop!
+ rankshop.command.create:
+  default: op
+  description: Permission for admin or staff create new shop rank
+ rankshop.command.remove:
+  description: Permission for admin or staff remove shop rank exists
+  default: op
+ rankshop.command.edit:
+  default: op
+  description: Permission for admin or staff edit shop rank exists
+ rankshop.command.help:
+  default: op
