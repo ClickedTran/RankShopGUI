@@ -8,7 +8,7 @@ RankShopGUI is inspired by a java server
 </div>
 
 ## FEATURE
-<h3>CREATE RANK</h3>
+<h6>CREATE RANK</h6>
 
 - [x] minimum rank requirement to advance to the next rank
 - [x] rank description
@@ -16,11 +16,11 @@ RankShopGUI is inspired by a java server
 - [x] set of items representing rank
 - [x] set slot for representative item
 
-<h3>REMOVE RANK</h3>
+<h6>REMOVE RANK</h6>
 
 - [x] Enter the category name to delete
 
-<h3>EDIT RANK</h3>
+<h6>EDIT RANK</h6>
 
 - [x] Edit the category name to represent rank
 - [x] Edit request rank
@@ -47,15 +47,16 @@ RankShopGUI is inspired by a java server
 - [Click to see tutorial](https://youtu.be/csEVH3Ts06U?si=-0NenHjyS7zYIpuZ)
 
 ## PLUGIN & VIRION SUPPORT
-<h3>PLUGIN</h3>
+<h6>PLUGIN</h6>
 
 - [PurePerms](https://poggit.pmmp.io/p/PurePerms)(poggit-orphanage)
 
-<h3>VIRIONS</h3>
+<h6>VIRIONS</h6>
 
 - [InvMenu](https://github.com/muqsit/InvMenu)(Muqsit)
 - [libPiggyEconomy](https://https://github.com/DaPigGuy/libPiggyEconomy)(DaPigGuy)
 - [FormAPI](https://github.com/jojoe77777/FormAPI)(jojoe77777)
+
 ## INSTALL
 - Step 1. Download the latest version
 - Step 2. Place the `RankShopGUI.phar` file into the `plugins` folder.
