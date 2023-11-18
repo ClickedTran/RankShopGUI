@@ -5,6 +5,7 @@
  This is a plugin that allows admins or staff to create shops to buy rank on the server!
   <br>
 RankShopGUI is inspired by a java server
+</div>
 
 ## FEATURE
 <h3>CREATE RANK</h3>
