@@ -29,3 +29,6 @@
 | **Command** | **Description** | **alias** |
 | --- | --- | --- |
 | `/rankshop` | `Open Shop Rank` | `rs` |
+
+## SUBCOMMAND & PERMISSION
+
