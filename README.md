@@ -31,4 +31,18 @@
 | `/rankshop` | `Open Shop Rank` | `rs` |
 
 ## SUBCOMMAND & PERMISSION
+| **SUBCOMMAND** | **DESCRIPTION** | **PERMISSION** | **DEFAULT** |
+| --- | --- | --- | --- |
+| `create` | Create new category for shop rank | `rankshopgui.command.create` | `op` |
+| `delete` | Delete category of shop rank | `rankshopgui.command.remove` | `op` |
+| `setup` | Edit category of shop rank | `rankshopgui.command.edit` | `op` |
+| `help` | See all command of shop rank | `rankshopgui.command.help | `op` |
 
+## TUTORIAL 
+- [Click to see tutorial](https://youtu.be/csEVH3Ts06U?si=-0NenHjyS7zYIpuZ)
+
+## INSTALL
+- Step 1. Download the latest version
+- Step 2. Place the `RankShopGUI.phar` file into the `plugins` folder.
+- Step 3. Restart the server.
+- Step 4. Done!
