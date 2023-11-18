@@ -1,6 +1,10 @@
 ## GENERAL
-- This is a plugin that allows admins or staff to create shops to buy rank on the server!
-- RankShopGUI is inspired by a java server
+<div align="center">
+  <img src="https://github.com/ClickedTran/RankShopGUI/blob/Master/icon.png" width="128px" height="128px">
+ <br>
+ This is a plugin that allows admins or staff to create shops to buy rank on the server!
+  <br>
+RankShopGUI is inspired by a java server
 
 ## FEATURE
 <h3>CREATE RANK</h3>
