@@ -57,6 +57,19 @@ RankShopGUI is inspired by a java server
 - [libPiggyEconomy](https://https://github.com/DaPigGuy/libPiggyEconomy)(DaPigGuy)
 - [FormAPI](https://github.com/jojoe77777/FormAPI)(jojoe77777)
 
+## FOR DEVELOPER
+<h6>Create new category and rank</h6>
+
+```php
+RankShopGUI::getInstance()->createShop(string $name, string $rankRequired, string $nextRank, string $description, int $price, string $item, int $slot)
+```
+
+<h6>Remove Category</h6>
+
+```php
+RankShopGUI::getInstance()->removeShop(string $name)
+```
+
 ## INSTALL
 - Step 1. Download the latest version
 - Step 2. Place the `RankShopGUI.phar` file into the `plugins` folder.
