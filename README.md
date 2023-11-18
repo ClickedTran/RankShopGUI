@@ -1,6 +1,6 @@
 ## GENERAL
 <div align="center">
-  <img src="https://github.com/ClickedTran/RankShopGUI/blob/Master/icon.png" width="128px" height="128px">
+  <img src="https://github.com/ClickedTran/RankShopGUI/blob/Master/icon.png" width="512x" height="auto">
  <br>
  This is a plugin that allows admins or staff to create shops to buy rank on the server!
   <br>
