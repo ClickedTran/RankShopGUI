@@ -30,7 +30,7 @@ class RankShopGUICommand extends Command implements PluginOwned{
   public function __construct(RankShopGUI $plugin){
     $this->plugin = $plugin;
     parent::__construct("rankshop", "§oOpen Menu Shop Rank", null, ["rs", "ranks"]);
-    $this->setPermission("rankshop.command");
+    $this->setPermission("rankshopgui.command");
   }
   
   public function execute(CommandSender $sender, String $label, Array $args){
@@ -46,7 +46,7 @@ class RankShopGUICommand extends Command implements PluginOwned{
         case "create":
         case "new":
         case "createshop":
-          if(!$sender->hasPermission("rankshop.command.create")){
+          if(!$sender->hasPermission("rankshopgui.command.create")){
              $sender->sendMessage("§l§8[ §4! §8]§r§c You don't have permission to use command!");
           }else{
              $form = new FormManager();
@@ -55,7 +55,7 @@ class RankShopGUICommand extends Command implements PluginOwned{
         break;
         case "remove":
         case "delete":
-          if(!$sender->hasPermission("rankshop.command.remove")){
+          if(!$sender->hasPermission("rankshopgui.command.remove")){
              $sender->sendMessage("§l§8[ §4! §8]§r§c You don't have permission to use command!");
              return;
           }else{
@@ -74,7 +74,7 @@ class RankShopGUICommand extends Command implements PluginOwned{
         break;
         case "edit":
         case "setup":
-          if(!$sender->hasPermission("rankshop.command.edit")){
+          if(!$sender->hasPermission("rankshopgui.command.edit")){
              $sender->sendMessage("§l§8[ §4! §8]§r§c You don't have permission to use command!");
              return;
           }else{
@@ -93,7 +93,7 @@ class RankShopGUICommand extends Command implements PluginOwned{
         break;
         case "?":
         case "help":
-          if(!$sender->hasPermission("rankshop.command.help")){
+          if(!$sender->hasPermission("rankshopgui.command.help")){
              $sender->sendMessage("§l§8[ §4! §8]§r§c You don't have permission to use command!");
              return;
           }else{
