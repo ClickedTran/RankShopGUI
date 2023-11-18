@@ -1,0 +1,16 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/Clickedtran/RankShopGUI
+build-by-default: true
+branches:
+- Master
+projects:
+  RankShopGUI:
+    icon: icon.png
+    libs:
+     - src: jojoe77777/FormAPI/libFormAPI
+       version: ^2.1.1
+     - src: muqsit/invmenu/InvMenu
+       version: ^4.6.4
+     - src: DaPigGuy/libPiggyEconomy/libPiggyEconomy
+     version: ^3.0.2
+    path: ""
+...
