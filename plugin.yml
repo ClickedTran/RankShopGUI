@@ -7,17 +7,17 @@ depend: [PurePerms]
 virions: ["InvMenu", "FormAPI", "libPiggyEconomy"]
 
 permissions:
- rankshop.command:
+ rankshopgui.command:
   default: true
   description: Permission for player use RankShop!
- rankshop.command.create:
+ rankshopgui.command.create:
   default: op
   description: Permission for admin or staff create new shop rank
- rankshop.command.remove:
+ rankshopguu.command.remove:
   description: Permission for admin or staff remove shop rank exists
   default: op
- rankshop.command.edit:
+ rankshopgui.command.edit:
   default: op
   description: Permission for admin or staff edit shop rank exists
- rankshop.command.help:
+ rankshopgui.command.help:
   default: op
