@@ -105,7 +105,7 @@ class FormManager {
     $form->addInput("Input category name");
     $form->addInput("Input rank required");
     $form->addInput("Input next rank");
-    $form->addInput("Input description");
+    $form->addInput("Input description, use §8{line}§f to go to the next line");
     $form->addInput("Input price rank");
     $form->addInput("Input a representative item");
     $form->addInput("Input slot for the representative item");
@@ -285,7 +285,7 @@ class FormManager {
       $player->sendMessage(RankShopGUI::SUCCESS."§a Changed description successfully");
     });
     $form->setTitle("§8( EDIT | ".strtoupper($category)." )");
-    $form->addInput("Input new description");
+    $form->addInput("§bUse §8{line} §bto go to the next line", "Input new description in here");
     $player->sendForm($form);
   }
   
