@@ -35,7 +35,7 @@ class GUIManager {
     $shop = RankShopGUI::getInstance()->getShop()->getAll();
     if(count($shop) >= 1){
       foreach($shop as $category => $slot){
-          $inv->setItem($shop[$category]["slot"], StringToItemParser::getInstance()->parse($shop[$category]["item"])->setCustomName((string)$category."\n\n§aRank required: ".$shop[$category]["rank_required"]." \n§9Next rank: ".$shop[$category]["next_rank"]." \n§aPrice: ".$shop[$category]["price"]." \n§aDescription: ".$shop[$category]["description"])->setCount(1));
+          $inv->setItem($shop[$category]["slot"], StringToItemParser::getInstance()->parse($shop[$category]["item"])->setCustomName((string)$category."\n\n§aRank required: ".$shop[$category]["rank_required"]." \n§9Next rank: ".$shop[$category]["next_rank"]." \n§aPrice: ".$shop[$category]["price"]." \n\n§b=====§9Description§b=====\n".str_replace(["{line}"], ["\n§r"], $shop[$category]["description"]))->setCount(1));
       }
     }
     $menu->setListener(function(InvMenuTransaction $transaction) use ($player) : InvMenuTransactionResult {
@@ -105,6 +105,7 @@ class GUIManager {
                       $pp->setGroup($player, $pp->getGroup($ex[5]));
                       $player->sendMessage(RankShopGUI::SUCCESS." §aYou bought rank §7".$ex[5]." §awith price §c". $ex[7]);
                       $player->removeCurrentWindow();
+                      $player->sendMessage("Thank you for using?");
                     }
                   });
                }
