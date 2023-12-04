@@ -21,10 +21,8 @@ use pocketmine\item\{Item, LegacyStringToItemParser, StringToItemParser};
 
 use muqsit\invmenu\InvMenu;
 use muqsit\invmenu\transaction\{InvMenuTransaction, InvMenuTransactionResult};
-use muqsit\customsizedinvmenu\CustomSizedInvMenu;
 
 use ClickedTran\rankshop\RankShopGUI;
-use _64FF00\PurePerms\PurePerms;
 
 class GUIManager {
   public function menuShop(Player $player){
