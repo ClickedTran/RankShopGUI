@@ -3,8 +3,7 @@ main: ClickedTran\rankshop\RankShopGUI
 api: 5.0.0
 version: 1.0.0
 author: ClickedTran
-depend: [PurePerms]
-virions: ["InvMenu", "FormAPI", "libPiggyEconomy"]
+virions: ["InvMenu", "FormAPI", "libPiggyEconomy", "libRanks"]
 
 permissions:
  rankshopgui.command:
