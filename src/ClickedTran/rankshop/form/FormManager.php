@@ -151,8 +151,7 @@ class FormManager {
   }
   
   public function editConfirm(Player $player, $category){
-    $plugin = RankShopGUI::getInstance();
-    $form = new SimpleForm(function(Player $player, $data) use ($plugin, $category) : void{
+    $form = new SimpleForm(function(Player $player, $data) use ($category) : void{
       if($data === null){
          return;
       }
