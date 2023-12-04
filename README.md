@@ -46,16 +46,11 @@ RankShopGUI is inspired by a java server
 ## TUTORIAL 
 - [Click to see tutorial](https://youtu.be/csEVH3Ts06U?si=-0NenHjyS7zYIpuZ)
 
-## PLUGIN & VIRION SUPPORT
-<h6>PLUGIN</h6>
-
-- [PurePerms](https://poggit.pmmp.io/p/PurePerms)(poggit-orphanage)
-
-<h6>VIRIONS</h6>
-
+## VIRION SUPPORT
 - [InvMenu](https://github.com/muqsit/InvMenu)(Muqsit)
 - [libPiggyEconomy](https://https://github.com/DaPigGuy/libPiggyEconomy)(DaPigGuy)
 - [FormAPI](https://github.com/jojoe77777/FormAPI)(jojoe77777)
+- [libRanks](https://github.com/ClickedTran/libRanks)(ClickedTran)
 
 ## FOR DEVELOPER
 <h6>Create new category and rank</h6>
