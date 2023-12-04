@@ -20,14 +20,13 @@ use pocketmine\Server;
 
 use jojoe77777\FormAPI\{SimpleForm, CustomForm, ModelForm};
 use ClickedTran\rankshop\RankShopGUI;
-use _64FF00\PurePerms\PurePerms;
 
 class FormManager {
   
   public function menuCreate(Player $player){
     $plugin = RankShopGUI::getInstance();
-    $pp = PurePerms::getInstance();
-    $form = new CustomForm(function(Player $player, $data) use ($plugin, $pp) : void{
+
+    $form = new CustomForm(function(Player $player, $data) use ($plugin) : void{
       if($data === null){
         return;
       }
@@ -43,7 +42,7 @@ class FormManager {
          $player->sendMessage(RankShopGUI::FAIL."§c Please input rank required!");
          return;
       }
-      if(!isset($pp->getProvider()->getGroupsData()[$data[1]])){
+      if(empty($plugin->getRankProvider()->getRankData($data[1]))){
          $player->sendMessage(RankShopGUI::FAIL."§c Rank §7".$data[1]."§c not found in data!");
          return;
       }
@@ -53,7 +52,7 @@ class FormManager {
          return;
       }
       
-      if(!isset($pp->getProvider()->getGroupsData()[$data[2]])){
+      if(empty($plugin->getRankProvider()->getRankData($data[2]))){
          $player->sendMessage(RankShopGUI::FAIL."§c Rank §7".$data[2]."§c not found in data!");
          return;
       }
@@ -63,10 +62,6 @@ class FormManager {
          $plugin->getShop()->save();
       }
       
-      if(!isset($pp->getProvider()->getGroupsData()[$data[2]])){
-         $player->sendMessage(RankShopGUI::FAIL."§c Rank §7".$data[2]."§c not found in data!");
-         return;
-      }
       if(!isset($data[4])){
          $player->sendMessage(RankShopGUI::FAIL."§c Please input price you want player buy rank!");
          return;
@@ -242,6 +237,10 @@ class FormManager {
          $player->sendMessage(RankShopGUI::FAIL."§c Please input new rank you want change!");
          return;
       }
+      if(empty($plugin->getRankProvider()->getRankData($data[0]))){
+         $player->sendMessage(RankShopGUI::FAIL."§c Rank §8".$data[0]."§c does not exist in the data!");
+         return;
+      }
       $plugin->getShop()->setNested($category.".rank_required", $data[0]);
       $plugin->getShop()->save();
       $player->sendMessage(RankShopGUI::SUCCESS."§a Rerank successfully");
@@ -259,6 +258,10 @@ class FormManager {
       }
       if(!isset($data[0])){
          $player->sendMessage(RankShopGUI::FAIL."§c Please input new rank you want change!");
+         return;
+      }
+      if(empty($plugin->getRankProvider()->getRankData($data[0]))){
+         $player->sendMessage(RankShopGUI::FAIL."§c Rank §8".$data[0]."§c does not exist in the data!");
          return;
       }
       $plugin->getShop()->setNested($category.".next_rank", $data[0]);
