@@ -82,7 +82,7 @@ class GUIManager {
              $player->sendMessage("§l§8[ §4! §8]§r§c Your current rank is different from the required rank. The required rank is: §7".$ex[2]);
              $player->removeCurrentWindow();
           }else{
-             $plugin->getEconomy()->getMoney($player, function(int|float $money) use ($player, $plugin, $all_shop, $remove, $item, $inv, $ex){
+             $plugin->getEconomy()->getMoney($player, function(int|float $money) use ($player, $plugin, $remove, $ex){
              if($money < (float)$remove){
                 $player->sendMessage(RankShopGUI::FAIL. " §cYou don't have money to buy rank!");
                 $player->removeCurrentWindow();
