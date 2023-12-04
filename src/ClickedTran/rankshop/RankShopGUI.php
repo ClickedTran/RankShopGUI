@@ -21,12 +21,12 @@ use pocketmine\utils\Config;
 
 use muqsit\invmenu\InvMenuHandler;
 use DaPigGuy\libPiggyEconomy\libPiggyEconomy;
+use ClickedTran\libRanks\libRanks;
 
 use ClickedTran\rankshop\command\RankShopGUICommand;
 
 class RankShopGUI extends PluginBase {
-  public $editShop = [];
-  public $shop, $economyProvider;
+  public $shop, $economyProvider, $rankProvider;
   
   const PREFIX = "§l§b[ §aRankShopGUI§b ]§r";
   const SUCCESS = "§l§8[ §eSUCCESSFULLY §8]§r";
@@ -42,17 +42,15 @@ class RankShopGUI extends PluginBase {
   
   /**Enable Plugin*/
   public function onEnable() : void{
-    
-    $this->getLogger()->info("  ___           _    ___ _             
- | _ \__ _ _ _ | |__/ __| |_  ___ _ __ 
- |   / _` | ' \| / /\__ \ ' \/ _ \ '_ \
- |_|_\__,_|_||_|_\_\|___/_||_\___/ .__/
-                                 |_|   by ClickedTran");
     $this->getServer()->getCommandMap()->register("RankShopGUI", new RankShopGUICommand($this));
     
     libPiggyEconomy::init();
     $this->economyProvider = libPiggyEconomy::getProvider($this->getConfig()->get("economy"));
     
+    libRanks::init();
+    $this->rankProvider = libRanks::getProvider($this->getConfig()->get("rank"));
+    $this->saveDefaultConfig();
+
     if(!InvMenuHandler::isRegistered()) InvMenuHandler::register($this);
     
     self::$instance = $this;
@@ -92,5 +90,9 @@ class RankShopGUI extends PluginBase {
   
   public function getEconomy(){
     return $this->economyProvider;
+  }
+  
+  public function getRankProvider(){
+    return $this->rankProvider;
   }
 }
