@@ -76,7 +76,7 @@ class GUIManager {
           $rank = $inv->getItem(13);
           $ex = explode(" ", $rank->getCustomName());
           $remove = ltrim($ex[7], "$");
-          if($plugin->getRankProvider->getRank($player) !== $ex[2]){
+          if($plugin->getRankProvider()->getRank($player) !== $ex[2]){
              $player->sendMessage("§l§8[ §4! §8]§r§c Your current rank is different from the required rank. The required rank is: §7".$ex[2]);
              $player->removeCurrentWindow();
           }else{
@@ -87,7 +87,7 @@ class GUIManager {
               }else{
                 $plugin->getEconomy()->takeMoney($player, (float)$remove);
                 $plugin->getRankprovider()->removeRank($player, $ex[2]);
-                $plugin->getRankProvider->giveRank($player, (string)$ex[5]);
+                $plugin->getRankProvider()->giveRank($player, (string)$ex[5]);
                 $player->sendMessage(RankShopGUI::SUCCESS." §aYou bought rank §7".$ex[5]." §awith price §c$". $remove);
                 $player->removeCurrentWindow();
                 $player->sendMessage("§9[§l§bRANKSHOPGUI§r§9] §aThank you for using!");
