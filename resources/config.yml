@@ -1,3 +1,6 @@
 ---
 economy:
  provider: bedrockeconomy #If you want to use EconomyAPI, change it to economyapi
+
+rank:
+ provider: ranksystem
